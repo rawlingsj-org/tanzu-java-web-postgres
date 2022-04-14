@@ -12,9 +12,9 @@ metadata:
 spec:
   name: db
   service:
-    apiVersion: sql.tanzu.vmware.com/v1
-    kind: Postgres
-    name: postgres-sample
+    apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+    kind: ResourceClaim
+    name: db
   workload:
     apiVersion: serving.knative.dev/v1
     kind: Service
