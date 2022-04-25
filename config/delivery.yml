@@ -13,7 +13,7 @@ spec:
     metadata:
       annotations:
         boot.spring.io/actuator: http://:8081/actuator
-        boot.spring.io/version: 2.6.6
+        boot.spring.io/version: 2.6.7
         conventions.apps.tanzu.vmware.com/applied-conventions: |-
           spring-boot-convention/spring-boot
           spring-boot-convention/spring-boot-graceful-shutdown
@@ -27,7 +27,7 @@ spec:
           appliveview-sample/app-live-view-systemproperties
         developer.conventions/target-containers: workload
         services.conventions.apps.tanzu.vmware.com/mysql: mysql-connector-java/8.0.28
-        services.conventions.apps.tanzu.vmware.com/postgres: postgresql/42.3.3
+        services.conventions.apps.tanzu.vmware.com/postgres: postgresql/42.3.4
       labels:
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: tanzu-java-web-postgres
@@ -48,7 +48,7 @@ spec:
           value: postgres
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: gcr.io/ship-interfaces-dev/supply-chain/tanzu-java-web-postgres-dev@sha256:6abfd0f3e1c604596ee9d246b05975a3b9b50d4d1100b375492ae3d732e5e99c
+        image: gcr.io/ship-interfaces-dev/supply-chain/tanzu-java-web-postgres-dev@sha256:6a4be12582062a64c082976d439ceebf0071c6df2c9be3071561af0e70434d40
         livenessProbe:
           httpGet:
             path: /livez
