@@ -48,7 +48,7 @@ spec:
           value: postgres
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: gcr.io/ship-interfaces-dev/supply-chain/tanzu-java-web-postgres-dev@sha256:6a4be12582062a64c082976d439ceebf0071c6df2c9be3071561af0e70434d40
+        image: gcr.io/ship-interfaces-dev/supply-chain/tanzu-java-web-postgres-dev@sha256:e59134d6d5c8c96407ce6a9b3dc1fb559893b64afee8a1b16b8358fc4eca9c23
         livenessProbe:
           httpGet:
             path: /livez
